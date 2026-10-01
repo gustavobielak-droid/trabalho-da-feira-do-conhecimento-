@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ponte Inteligente - Projeto Interdisciplinar de Matemática, Física, Tecnociência e Robótica">
+    <meta name="author" content="Equipe Ponte Inteligente">
+    <title>Ponte Inteligente | Matemática • Física • Robótica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- PARTÍCULAS DE FUNDO -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- CURSOR PERSONALIZADO -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- BARRA DE PROGRESSO DE SCROLL -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">⚙️</span>
+                <span class="logo-text">PONTE<span class="highlight">.IA</span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#materias" class="nav-link">Matérias</a></li>
+                <li><a href="#simulador" class="nav-link">Simulador</a></li>
+                <li><a href="#calculadora" class="nav-link">Calculadora</a></li>
+                <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                <li><a href="#equipe" class="nav-link">Equipe</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">PROJETO INTERDISCIPLINAR 2025</div>
+            <h1 class="hero-title">
+                <span class="line">PONTE</span>
+                <span class="line gradient-text">INTELIGENTE</span>
+            </h1>
+            <p class="hero-subtitle">
+                Sistema automatizado que mede a altura de veículos e libera a catraca 
+                apenas quando os parâmetros de segurança são atendidos.
+            </p>
+            <div class="hero-buttons">
+                <a href="#simulador" class="btn btn-primary">▶ Testar Simulador</a>
+                <a href="#sobre" class="btn btn-outline">Saber Mais</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number" data-target="3">0</div>
+                    <div class="stat-label">Matérias</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">Sensores</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">% Automação</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-cube">
+                <div class="face front">📏</div>
+                <div class="face back">⚡</div>
+                <div class="face right">🤖</div>
+                <div class="face left">📐</div>
+                <div class="face top">🔬</div>
+                <div class="face bottom">⚙️</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 01 - SOBRE</span>
+                <h2 class="section-title">O que é a <span class="gradient-text">Ponte Inteligente</span>?</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card reveal">
+                    <div class="card-icon">🎯</div>
+                    <h3>Objetivo</h3>
+                    <p>Desenvolver uma maquete automatizada que mede a altura de um carrinho de brinquedo e controla o acesso através de uma catraca, integrando conceitos de múltiplas disciplinas.</p>
+                </div>
+                <div class="about-card reveal">
+                    <div class="card-icon">🔧</div>
+                    <h3>Funcionamento</h3>
+                    <p>Sensores ultrassônicos medem a altura do veículo. Um microcontrolador processa os dados e aciona a catraca apenas se a altura estiver dentro dos parâmetros permitidos.</p>
+                </div>
+                <div class="about-card reveal">
+                    <div class="card-icon">🧠</div>
+                    <h3>Interdisciplinaridade</h3>
+                    <p>Matemática (cálculos e funções), Física (velocidade do som, sensores), Tecnociência e Robótica (Arduino, programação, circuitos).</p>
+                </div>
+                <div class="about-card reveal">
+                    <div class="card-icon">🚀</div>
+                    <h3>Inovação</h3>
+                    <p>Sistema totalmente automatizado com feedback em tempo real, display LCD, LEDs indicadores e controle de acesso inteligente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MATÉRIAS -->
+    <section id="materias" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 02 - MATÉRIAS</span>
+                <h2 class="section-title">Integração <span class="gradient-text">Interdisciplinar</span></h2>
+            </div>
+            <div class="subjects-grid">
+                <div class="subject-card reveal" data-subject="mat">
+                    <div class="subject-icon">📐</div>
+                    <h3>Matemática</h3>
+                    <ul>
+                        <li>Cálculo de altura por trigonometria</li>
+                        <li>Funções lineares e quadráticas</li>
+                        <li>Estatística de medições</li>
+                        <li>Margem de erro e tolerância</li>
+                    </ul>
+                </div>
+                <div class="subject-card reveal" data-subject="fis">
+                    <div class="subject-icon">⚡</div>
+                    <h3>Física</h3>
+                    <ul>
+                        <li>Velocidade do som (343 m/s)</li>
+                        <li>Ondas ultrassônicas</li>
+                        <li>Cinemática do veículo</li>
+                        <li>Circuitos elétricos</li>
+                    </ul>
+                </div>
+                <div class="subject-card reveal" data-subject="rob">
+                    <div class="subject-icon">🤖</div>
+                    <h3>Tecnociência & Robótica</h3>
+                    <ul>
+                        <li>Arduino / Microcontrolador</li>
+                        <li>Sensor HC-SR04</li>
+                        <li>Servo motores</li>
+                        <li>Programação em C++</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIMULADOR -->
+    <section id="simulador" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 03 - SIMULADOR</span>
+                <h2 class="section-title">Simulador da <span class="gradient-text">Catraca</span></h2>
+                <p class="section-desc">Ajuste a altura do carrinho e veja se ele passa pela catraca!</p>
+            </div>
+            
+            <div class="simulator-container">
+                <div class="simulator-visual">
+                    <div class="scene">
+                        <div class="bridge"></div>
+                        <div class="sensor-beam">
+                            <div class="beam-line"></div>
+                            <span class="sensor-label">HC-SR04</span>
+                        </div>
+                        <div class="car" id="car">
+                            <div class="car-body"></div>
+                            <div class="wheel wheel-left"></div>
+                            <div class="wheel wheel-right"></div>
+                        </div>
+                        <div class="catraca" id="catraca">
+                            <div class="catraca-post"></div>
+                            <div class="catraca-arm" id="catracaArm"></div>
+                        </div>
+                        <div class="measure-line" id="measureLine">
+                            <span class="measure-value" id="measureValue">0 cm</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="simulator-controls">
+                    <div class="control-group">
+                        <label for="alturaRange">Altura do Carrinho: <span id="alturaDisplay">10 cm</span></label>
+                        <input type="range" id="alturaRange" min="1" max="30" value="10" step="0.5">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="limiteRange">Limite Permitido: <span id="limiteDisplay">15 cm</span></label>
+                        <input type="range" id="limiteRange" min="5" max="25" value="15" step="0.5">
+                    </div>
+
+                    <div class="sensor-data">
+                        <div class="data-row">
+                            <span>📡 Distância medida:</span>
+                            <span class="data-value" id="distanciaValor">-- cm</span>
+                        </div>
+                        <div class="data-row">
+                            <span>⏱️ Tempo de eco:</span>
+                            <span class="data-value" id="tempoValor">-- µs</span>
+                        </div>
+                        <div class="data-row">
+                            <span>📊 Altura calculada:</span>
+                            <span class="data-value" id="alturaCalculada">-- cm</span>
+                        </div>
+                        <div class="data-row">
+                            <span>🚦 Status:</span>
+                            <span class="data-value" id="statusValor">Aguardando</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" id="btnMedir">🔍 Medir e Testar</button>
+                    <button class="btn btn-outline" id="btnReset">🔄 Resetar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULADORA -->
+    <section id="calculadora" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 04 - MATEMÁTICA APLICADA</span>
+                <h2 class="section-title">Calculadora <span class="gradient-text">Científica</span></h2>
+                <p class="section-desc">Cálculos de altura por ultrassom: h = (v × t) / 2</p>
+            </div>
+            
+            <div class="calc-grid">
+                <div class="calc-card">
+                    <h3>📐 Cálculo de Altura</h3>
+                    <div class="input-group">
+                        <label>Tempo de eco (µs)</label>
+                        <input type="number" id="tempoInput" placeholder="Ex: 580" value="580">
+                    </div>
+                    <div class="input-group">
+                        <label>Velocidade do som (m/s)</label>
+                        <input type="number" id="velocidadeInput" value="343" step="0.1">
+                    </div>
+                    <button class="btn btn-primary" id="btnCalcular">Calcular Altura</button>
+                    <div class="result-box" id="resultBox">
+                        <span>Resultado:</span>
+                        <strong id="resultAltura">-- cm</strong>
+                    </div>
+                    <div class="formula">
+                        <code>h = (v × t) / 2</code>
+                    </div>
+                </div>
+
+                <div class="calc-card">
+                    <h3>📊 Estatísticas do Projeto</h3>
+                    <div class="stats-display">
+                        <div class="stat-item">
+                            <span>Velocidade do Som</span>
+                            <strong>343 m/s</strong>
+                        </div>
+                        <div class="stat-item">
+                            <span>Frequência do Sensor</span>
+                            <strong>40 kHz</strong>
+                        </div>
+                        <div class="stat-item">
+                            <span>Precisão</span>
+                            <strong>± 0.3 cm</strong>
+                        </div>
+                        <div class="stat-item">
+                            <span>Alcance</span>
+                            <strong>2 - 400 cm</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 05 - GALERIA</span>
+                <h2 class="section-title">Componentes do <span class="gradient-text">Projeto</span></h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal">
+                    <div class="gallery-icon">📡</div>
+                    <h4>Sensor HC-SR04</h4>
+                    <p>Mede distância por ultrassom (2cm a 400cm)</p>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-icon">🔌</div>
+                    <h4>Arduino Uno</h4>
+                    <p>Microcontrolador ATmega328P</p>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-icon">⚙️</div>
+                    <h4>Servo Motor SG90</h4>
+                    <p>Aciona a catraca com torque de 1.8 kg/cm</p>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-icon">💡</div>
+                    <h4>LEDs RGB</h4>
+                    <p>Verde = liberado, Vermelho = bloqueado</p>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-icon">📺</div>
+                    <h4>Display LCD 16x2</h4>
+                    <p>Mostra altura e status em tempo real</p>
+                </div>
+                <div class="gallery-item reveal">
+                    <div class="gallery-icon">🔋</div>
+                    <h4>Fonte 5V</h4>
+                    <p>Alimentação estabilizada do sistema</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPE -->
+    <section id="equipe" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 06 - EQUIPE</span>
+                <h2 class="section-title">Nossa <span class="gradient-text">Equipe</span></h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-card reveal">
+                    <div class="avatar">👨‍💻</div>
+                    <h4>Dev Full-Stack</h4>
+                    <p>Programação & Web</p>
+                </div>
+                <div class="team-card reveal">
+                    <div class="avatar">👩‍🔬</div>
+                    <h4>Eng. de Hardware</h4>
+                    <p>Circuitos & Sensores</p>
+                </div>
+                <div class="team-card reveal">
+                    <div class="avatar">👨‍🔧</div>
+                    <h4>Designer 3D</h4>
+                    <p>Maquete & Estrutura</p>
+                </div>
+                <div class="team-card reveal">
+                    <div class="avatar">👩‍🏫</div>
+                    <h4>Pesquisa</h4>
+                    <p>Física & Matemática</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">⚙️</span>
+                    <span>PONTE<span class="highlight">.IA</span></span>
+                </div>
+                <p>Projeto interdisciplinar — Matemática • Física • Tecnociência e Robótica</p>
+                <div class="footer-links">
+                    <a href="#home">Início</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#simulador">Simulador</a>
+                    <a href="#equipe">Equipe</a>
+                </div>
+                <p class="copyright">© 2025 Ponte Inteligente. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
