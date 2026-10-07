@@ -1,5 +1,5 @@
 /* =========================================================
-   PONTE INTELIGENTE - SISTEMA AVANÇADO v2.5
+   VIADUTO INTELIGENTE - SISTEMA AVANÇADO v2.5
    Módulos: Partículas | Cursor | Scroll | Simulador | 
             Calculadora | Animações | Sensores | Catraca
    ========================================================= */
@@ -311,7 +311,7 @@ class StatCounter {
 }
 
 /* =========================================================
-   MÓDULO 6: SIMULADOR DA PONTE INTELIGENTE
+   MÓDULO 6: SIMULADOR DA VIADUTO INTELIGENTE
    Sistema que mede altura e controla a catraca
    Baseado em: h = (v × t) / 2 (velocidade do som)
    ========================================================= */
@@ -650,7 +650,7 @@ class App {
     }
 
     async init() {
-        console.log('%c🚀 PONTE INTELIGENTE v2.5', 'color: #00f0ff; font-size: 20px; font-weight: bold; text-shadow: 0 0 10px #00f0ff;');
+        console.log('%c🚀 VIADUTO INTELIGENTE v2.5', 'color: #00f0ff; font-size: 20px; font-weight: bold; text-shadow: 0 0 10px #00f0ff;');
         console.log('%c Sistema inicializando...', 'color: #8892b0; font-size: 12px;');
 
         // Aguardar DOM
